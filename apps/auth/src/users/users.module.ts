@@ -10,6 +10,7 @@ import { UserRepository } from './dtos/user.repository';
     DatabaseModule.forFeature([{ name: UserDocument.name, schema: UserSchema }]),
   ],
   controllers: [UsersController],
-  providers: [UsersService, UserRepository]
+  providers: [UsersService, UserRepository],
+  exports: [UsersService]
 })
 export class UsersModule { }
